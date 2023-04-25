@@ -18,6 +18,7 @@ driver.find_element(By.XPATH, '//*[@id="password"]').send_keys("addweb123")
 driver.find_element(By.XPATH, '//*[@id="submit-login"]').click()
 
 time.sleep(3)
+
 # Verify that the user is on Dashboard page then Click on Leads button on dashboard
 expected_title = "Dashboard"
 actual_title = driver.title
@@ -184,7 +185,8 @@ driver.find_element(By.XPATH, f'//*[@id="dropdownMenuLink-%s"]' % var_id).click(
 time.sleep(2)
 driver.find_element(By.XPATH, f'//*[@id="row-%s"]/td[9]/div/div/div/a[2]' % var_id).click()
 time.sleep(2)
-# Change some thing in form and save
+
+# Change some fields in form and save
 driver.find_element(By.ID, 'client_name').clear()
 driver.find_element(By.ID, 'client_name').send_keys("testing")
 driver.find_element(By.ID, 'client_email').clear()
