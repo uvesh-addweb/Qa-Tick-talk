@@ -1,8 +1,11 @@
+import unittest
+# import testRunner as testRunner
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.support.select import Select
 from selenium.webdriver.common.by import By
 import time
+import HtmlTestRunner
 
 # create a Service object for the ChromeDriver
 service = Service('/home/addweb/PycharmProjects/FirstScript/Drivers/chromedriver.exe')
@@ -191,6 +194,7 @@ driver.find_element(By.ID, 'client_name').clear()
 driver.find_element(By.ID, 'client_name').send_keys("testing")
 driver.find_element(By.ID, 'client_email').clear()
 driver.find_element(By.ID, 'client_email').send_keys("test1@gmail.com")
-
 driver.find_element(By.XPATH, '//*[@id="save-lead-form"]').click()
+
 time.sleep(5)
+driver.quit()
