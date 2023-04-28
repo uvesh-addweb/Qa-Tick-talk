@@ -27,10 +27,10 @@ class Testing(unittest.TestCase):
         cls.driver.find_element(By.XPATH, '//*[@id="submit-login"]').click()
         time.sleep(3)
 
-    # @classmethod
-    # def tearDownClass(cls) -> None:
-    #     cls.driver.quit()
-    #     cls.driver.close()
+    @classmethod
+    def tearDownClass(cls) -> None:
+        cls.driver.quit()
+        cls.driver.close()
 
     def test_dashboard(self):
         # Verify that the user is on Dashboard page then Click on Leads button on dashboard
